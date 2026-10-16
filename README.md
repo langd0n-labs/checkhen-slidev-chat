@@ -35,4 +35,4 @@ npm test
 
 ## License
 
-MIT. A deck that uses this package can use any license. CheckHen itself is AGPL-3.0; this package talks to it over HTTP and Socket.IO and contains none of the CheckHen app or server code.
+MIT. A deck that uses this package can use any license.
