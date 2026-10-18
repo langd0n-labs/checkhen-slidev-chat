@@ -8,7 +8,7 @@ In the deck's `package.json`:
 
 ```json
 "dependencies": {
-  "@checkhen/slidev-chat": "https://github.com/langd0n-labs/checkhen-slidev-chat/archive/refs/tags/v0.1.0.tar.gz"
+  "@checkhen/slidev-chat": "https://github.com/langd0n-labs/checkhen-slidev-chat/archive/refs/tags/v0.1.1.tar.gz"
 }
 ```
 
