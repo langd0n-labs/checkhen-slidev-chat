@@ -1,6 +1,6 @@
 {
   "name": "@checkhen/slidev-chat",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Show CheckHen's anonymous class chat inside a Slidev deck",
   "license": "MIT",
   "repository": "github:langd0n-labs/checkhen-slidev-chat",

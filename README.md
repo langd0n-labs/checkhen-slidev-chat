@@ -8,8 +8,18 @@ In the deck's `package.json`:
 
 ```json
 "dependencies": {
-  "@checkhen/slidev-chat": "https://github.com/langd0n-labs/checkhen-slidev-chat/archive/refs/tags/v0.1.1.tar.gz"
+  "@checkhen/slidev-chat": "https://github.com/langd0n-labs/checkhen-slidev-chat/archive/refs/tags/v0.1.2.tar.gz"
 }
+```
+
+Then add a `vite.config.ts` beside the deck's `slides.md`. Without it the slides render blank, because Slidev does not pre-bundle `socket.io-client` when only the package's components import it:
+
+```ts
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  optimizeDeps: { include: ['socket.io-client'] },
+})
 ```
 
 ## Use
@@ -21,7 +31,7 @@ Both take two props:
 - `server`: the CheckHen address, for example `https://checkhen.example.edu`.
 - `ticket`: the projection ticket from the CheckHen instructor dashboard.
 
-[`example/`](example/) is a working deck with the glue code (`global-top.vue`, `chat-config.js`, `setup/main.ts`, `style.css`). Copy those files into your deck.
+[`example/`](example/) is a working deck with the glue code (`global-top.vue`, `chat-config.js`, `setup/main.ts`, `style.css`). Copy those files, and `vite.config.ts`, into your deck.
 
 The CheckHen deployment must allow the deck's origin: set its `SLIDEV_ORIGIN` to the address the deck runs at, for example `http://localhost:3030`.
 
